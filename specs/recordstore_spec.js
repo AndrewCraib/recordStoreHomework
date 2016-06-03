@@ -24,7 +24,11 @@ describe('a record store', function(){
    it('should add a record to the inventory', function(){
     rollingRecords.add([oasis, arcticMonkeys, theStrokes])
     assert.equal(3, rollingRecords.inventory.length)
-    console.log(rollingRecords.inventory)
+   })
+
+   it('should be able to find a record', function(){
+    rollingRecords.find(oasis)
+    assert.equal("Oasis", oasis.artist)
    })
 
 });
